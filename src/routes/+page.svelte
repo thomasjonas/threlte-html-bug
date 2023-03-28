@@ -1,2 +1,10 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang="ts">
+	import Scene from '$lib/Scene.svelte';
+	import { Canvas, type ThrelteContext } from '@threlte/core';
+
+	let three: ThrelteContext;
+</script>
+
+<Canvas shadows={true} bind:ctx={three} linear flat>
+	<Scene />
+</Canvas>
